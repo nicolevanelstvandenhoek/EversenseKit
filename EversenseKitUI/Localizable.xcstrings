@@ -12884,7 +12884,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Hoge Glucose"
+            "value" : "Hoge glucose"
           }
         },
         "pl" : {
@@ -17092,7 +17092,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Lage Glucose"
+            "value" : "Lage glucose"
           }
         },
         "pl" : {
@@ -29396,7 +29396,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Zender Actief"
+            "value" : "Zender actief"
           }
         },
         "pl" : {
@@ -29882,7 +29882,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Zender Inactief"
+            "value" : "Zender inactief"
           }
         },
         "pl" : {
