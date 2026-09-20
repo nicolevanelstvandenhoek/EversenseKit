@@ -206,7 +206,7 @@ struct TransmitterSettingsView: View {
 
             if !viewModel.error.isEmpty {
                 Text(viewModel.error)
-                    .foregroundStyle(.red)
+                    .foregroundStyle(.pink)
             }
 
             Button(action: viewModel.saveSettings) {
