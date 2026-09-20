@@ -35,7 +35,7 @@ struct BatteryView: View {
         switch batteryLevel {
         // returns red color for range 0% to 20%
         case 0 ... 0.2:
-            return Color.red
+            return Color.pink
         // returns yellow color for range 20% to 50%
         case 0.2 ... 0.5:
             return Color.yellow

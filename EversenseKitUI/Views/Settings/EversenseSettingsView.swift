@@ -329,7 +329,7 @@ struct EversenseSettingsView: View {
                 case .Critical:
                     Image(systemName: "exclamationmark.triangle.fill")
                         .font(.headline)
-                        .foregroundStyle(.red)
+                        .foregroundStyle(.pink)
                 }
 
                 HStack(spacing: 5) {

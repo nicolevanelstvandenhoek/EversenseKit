@@ -18,7 +18,7 @@ struct EversenseScanView: View {
 
                     if !viewModel.error.isEmpty {
                         Text(viewModel.error)
-                            .foregroundStyle(.red)
+                            .foregroundStyle(.pink)
                     }
                 }
 

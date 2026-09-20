@@ -152,7 +152,7 @@ extension EversenseSettingsViewModel: StateObserver {
             nextCalibrationMinutes = max(floor(nextCalibrationIn.truncatingRemainder(dividingBy: .hours(1)) / .minutes(1)), 0)
 
             if nextCalibrationProcess == 1 {
-                nextCalibrationProcessColor = .red
+                nextCalibrationProcessColor = .pink
             } else if nextCalibrationIn <= .hours(24) {
                 nextCalibrationProcessColor = .orange
             } else {

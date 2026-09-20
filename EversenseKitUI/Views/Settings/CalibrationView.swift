@@ -48,7 +48,7 @@ struct CalibrationView: View {
             Spacer()
             if !viewModel.error.isEmpty {
                 Text(viewModel.error)
-                    .foregroundStyle(.red)
+                    .foregroundStyle(.pink)
             }
             Button(action: viewModel.calibrate) {
                 if viewModel.isLoading {
