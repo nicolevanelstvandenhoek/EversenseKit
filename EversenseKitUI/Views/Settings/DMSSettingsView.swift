@@ -121,7 +121,7 @@ struct DMSSettingsView: View {
 
                             if !viewModel.error.isEmpty {
                                 Text(viewModel.error)
-                                    .foregroundStyle(.red)
+                                    .foregroundStyle(.pink)
                             }
                         }
                     }
@@ -149,7 +149,7 @@ struct DMSSettingsView: View {
                                         Spacer()
                                         Button(action: { viewModel.confirmRemoveFollower(follower: user) }) {
                                             Image(systemName: "trash")
-                                                .foregroundStyle(.red)
+                                                .foregroundStyle(.pink)
                                         }
                                     }
                                 }
