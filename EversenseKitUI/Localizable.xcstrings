@@ -900,7 +900,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Er is in 24 uur geen kalibratie uitgevoerd. Uw systeem bevindt zich nu in de herinitialisatiefase en u moet 4 vingerprikkalibratietests uitvoeren."
+            "value" : "Er is in 24 uur geen kalibratie uitgevoerd. Je systeem bevindt zich nu in de herinitialisatiefase en je moet 4 vingerprikkalibratietests uitvoeren."
           }
         },
         "pl" : {
@@ -1062,7 +1062,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Er is een nieuwe sensor gedetecteerd. Koppel uw sensor en zender als u een nieuwe sensor en/of zender hebt."
+            "value" : "Er is een nieuwe sensor gedetecteerd. Koppel je sensor en zender als je een nieuwe sensor en/of zender hebt."
           }
         },
         "pl" : {
@@ -1546,7 +1546,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Weet u zeker dat u deze volger wilt verwijderen uit uw Eversense NU delen?"
+            "value" : "Weet je zeker dat je deze volger wilt verwijderen uit je Eversense NU delen?"
           }
         },
         "pl" : {
@@ -1708,7 +1708,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Weet u zeker dat u wilt stoppen met het gebruik van Eversense CGM?"
+            "value" : "Weet je zeker dat je wilt stoppen met het gebruik van Eversense CGM?"
           }
         },
         "pl" : {
@@ -4948,7 +4948,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kies uw Eversense zender"
+            "value" : "Kies je Eversense zender"
           }
         },
         "pl" : {
@@ -5110,7 +5110,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Configureer hoe lang de zender losgekoppeld mag zijn van uw telefoon"
+            "value" : "Configureer hoe lang de zender losgekoppeld mag zijn van je telefoon"
           }
         },
         "pl" : {
@@ -5434,7 +5434,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Configureer wanneer u een waarschuwing voor lage glucose ontvangt"
+            "value" : "Configureer wanneer je een waarschuwing voor lage glucose ontvangt"
           }
         },
         "pl" : {
@@ -7540,7 +7540,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Schakel deze waarde uit als u geen waarschuwingen van uw zender wilt ontvangen."
+            "value" : "Schakel deze waarde uit als je geen waarschuwingen van je zender wilt ontvangen."
           }
         },
         "pl" : {
@@ -8998,7 +8998,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Schakel deze waarde in als u waarschuwingen van uw zender wilt ontvangen wanneer u een hoge glucosewaarde overschrijdt."
+            "value" : "Schakel deze waarde in als je waarschuwingen van je zender wilt ontvangen wanneer je een hoge glucosewaarde overschrijdt."
           }
         },
         "pl" : {
@@ -10294,7 +10294,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vind uw Eversense"
+            "value" : "Vind je Eversense"
           }
         },
         "pl" : {
@@ -13856,7 +13856,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Als uw Eversense 365 al actief is, zorg er dan voor dat u hetzelfde account gebruikt."
+            "value" : "Als je Eversense 365 al actief is, zorg er dan voor dat je hetzelfde account gebruikt."
           }
         },
         "pl" : {
@@ -14018,7 +14018,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Over 4 uur is uw kalibratie verstreken en wordt er geen glucose weergegeven. Voer nu een bloedglucose kalibratie met een vingerprik uit."
+            "value" : "Over 4 uur is je kalibratie verstreken en wordt er geen glucose weergegeven. Voer nu een bloedglucose kalibratie met een vingerprik uit."
           }
         },
         "pl" : {
@@ -17578,7 +17578,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Zorg ervoor dat uw Eversense in de koppelstand staat. Lees de handleiding om te leren hoe dit werkt."
+            "value" : "Zorg ervoor dat je Eversense in de koppelstand staat. Lees de handleiding om te leren hoe dit werkt."
           }
         },
         "pl" : {
@@ -19522,7 +19522,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Er zijn niet genoeg gegevens verzameld na uw kalibratie-invoer. Voer nu een bloedglucose kalibratie met een vingerprik in."
+            "value" : "Er zijn niet genoeg gegevens verzameld na je kalibratie-invoer. Voer nu een bloedglucose kalibratie met een vingerprik in."
           }
         },
         "pl" : {
@@ -24054,7 +24054,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Selecteer uw zone"
+            "value" : "Selecteer je zone"
           }
         },
         "pl" : {
@@ -27452,7 +27452,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "De verbinding tussen uw sensor en zender is verbroken. Er zijn geen glucosegegevens beschikbaar totdat de verbinding is hersteld."
+            "value" : "De verbinding tussen je sensor en zender is verbroken. Er zijn geen glucosegegevens beschikbaar totdat de verbinding is hersteld."
           }
         },
         "pl" : {
@@ -27614,7 +27614,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "De verbinding tussen uw sensor en zender is niet stabiel. Plaats uw zender voor een betere signaalsterkte."
+            "value" : "De verbinding tussen je sensor en zender is niet stabiel. Plaats je zender voor een betere signaalsterkte."
           }
         },
         "pl" : {
@@ -28100,7 +28100,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Het systeem heeft een probleem met de batterij van uw zender gedetecteerd. U kunt het systeem blijven gebruiken, maar neem contact op met de Eversense Klantenservice voor een vervangende zender."
+            "value" : "Het systeem heeft een probleem met de batterij van je zender gedetecteerd. Je kunt het systeem blijven gebruiken, maar neem contact op met de Eversense Klantenservice voor een vervangende zender."
           }
         },
         "pl" : {
@@ -28424,7 +28424,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "De zender kan een alarm geven als hij voorspelt dat u onder de drempel zakt."
+            "value" : "De zender kan een alarm geven als hij voorspelt dat je onder de drempel zakt."
           }
         },
         "pl" : {
@@ -28586,7 +28586,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "De zender kan een alarm geven als hij voorspelt dat u boven de drempel komt."
+            "value" : "De zender kan een alarm geven als hij voorspelt dat je boven de drempel komt."
           }
         },
         "pl" : {
@@ -32470,7 +32470,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Gebruik uw BG meter om uw glucose te controleren. Neem contact op met de Eversense Klantenservice als het probleem zich blijft voordoen."
+            "value" : "Gebruik je BG-meter om je glucose te controleren. Neem contact op met de Eversense Klantenservice als het probleem zich blijft voordoen."
           }
         },
         "pl" : {
@@ -33442,7 +33442,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Uw kalibratie is bijna klaar. Voer nu een kalibratie van de bloedglucosemeter uit."
+            "value" : "Je kalibratie is bijna klaar. Voer nu een kalibratie van de bloedglucosemeter uit."
           }
         },
         "pl" : {
@@ -33604,7 +33604,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Uw sensorglucosewaarde is te hoog. Meet uw glucose handmatig met uw bloedsuikermeter."
+            "value" : "Je sensorglucosewaarde is te hoog. Meet je glucose handmatig met je bloedsuikermeter."
           }
         },
         "pl" : {
@@ -33766,7 +33766,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Uw sensorglucosewaarde is te laag. Meet uw glucose handmatig met uw bloedglucosemeter."
+            "value" : "Je sensorglucosewaarde is te laag. Meet je glucose handmatig met je bloedglucosemeter."
           }
         },
         "pl" : {
@@ -33928,7 +33928,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Uw sensor heeft dag 365 overschreden. Neem contact op met uw zorgverlener om een vervanging te plannen."
+            "value" : "Je sensor heeft dag 365 overschreden. Neem contact op met je zorgverlener om een vervanging te plannen."
           }
         },
         "pl" : {
@@ -34090,7 +34090,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "De levensduur van uw sensor is verstreken. Neem contact op met uw zorgverlener om een vervanging te plannen."
+            "value" : "De levensduur van je sensor is verstreken. Neem contact op met je zorgverlener om een vervanging te plannen."
           }
         },
         "pl" : {
@@ -34252,7 +34252,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "De temperatuur van uw sensor is te hoog. Ga naar een koelere plaats om de sensorglucosewaarden weer te ontvangen. Als het probleem aanhoudt, neem dan contact op met de Eversense Klantenservice."
+            "value" : "De temperatuur van je sensor is te hoog. Ga naar een koelere plaats om de sensorglucosewaarden weer te ontvangen. Als het probleem aanhoudt, neem dan contact op met de Eversense Klantenservice."
           }
         },
         "pl" : {
@@ -34414,7 +34414,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "De temperatuur van uw sensor is te laag. Ga naar een warmere plek om de sensorglucosewaarden weer te ontvangen. Als het probleem aanhoudt, neem dan contact op met de Eversense Klantenservice."
+            "value" : "De temperatuur van je sensor is te laag. Ga naar een warmere plek om de sensorglucosewaarden weer te ontvangen. Als het probleem aanhoudt, neem dan contact op met de Eversense Klantenservice."
           }
         },
         "pl" : {
@@ -34576,7 +34576,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "De batterij van uw zender heeft nog ongeveer 24 uur te gaan."
+            "value" : "De batterij van je zender heeft nog ongeveer 24 uur te gaan."
           }
         },
         "pl" : {
@@ -34738,7 +34738,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Uw zender heeft een fout gedetecteerd. Neem contact op met de Eversense klantenservice."
+            "value" : "Je zender heeft een fout gedetecteerd. Neem contact op met de Eversense klantenservice."
           }
         },
         "pl" : {
@@ -34900,7 +34900,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Uw zender heeft een probleem met de trilmotor gedetecteerd en kan niet langer trillingswaarschuwingen geven. Neem contact op met de Eversense Klantenservice voor een vervangende zender."
+            "value" : "Je zender heeft een probleem met de trilmotor gedetecteerd en kan niet langer trillingswaarschuwingen geven. Neem contact op met de Eversense Klantenservice voor een vervangende zender."
           }
         },
         "pl" : {
@@ -35062,7 +35062,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Uw zender heeft een oude of ongeldige datum/tijdstempel."
+            "value" : "Je zender heeft een oude of ongeldige datum/tijdstempel."
           }
         },
         "pl" : {
@@ -35386,7 +35386,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Uw zender heeft geen garantie meer en geeft geen glucosewaarden meer. Neem contact op met uw distributeur om een nieuwe zender te bestellen."
+            "value" : "Je zender heeft geen garantie meer en geeft geen glucosewaarden meer. Neem contact op met je distributeur om een nieuwe zender te bestellen."
           }
         },
         "pl" : {
@@ -35548,7 +35548,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Uw zender heeft geen garantie meer en zal binnenkort geen glucosewaarden meer leveren. Neem contact op met uw distributeur om een nieuwe zender te bestellen."
+            "value" : "Je zender heeft geen garantie meer en zal binnenkort geen glucosewaarden meer leveren. Neem contact op met je distributeur om een nieuwe zender te bestellen."
           }
         },
         "pl" : {
@@ -35710,7 +35710,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Uw zender moet gekalibreerd worden. De sensorglucosewaarden worden niet meer weergegeven."
+            "value" : "Je zender moet gekalibreerd worden. De sensorglucosewaarden worden niet meer weergegeven."
           }
         },
         "pl" : {
@@ -35872,7 +35872,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "De batterij van uw zender is leeg. Laad de zender nu op om de sensorglucoseweergave te hervatten."
+            "value" : "De batterij van je zender is leeg. Laad de zender nu op om de sensorglucoseweergave te hervatten."
           }
         },
         "pl" : {
@@ -36034,7 +36034,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "De temperatuur van uw zender is te hoog. Ga naar een koelere ruimte om de sensorglucosewaarden weer te ontvangen. Als het probleem aanhoudt, neem dan contact op met de Eversense Klantenservice."
+            "value" : "De temperatuur van je zender is te hoog. Ga naar een koelere ruimte om de sensorglucosewaarden weer te ontvangen. Als het probleem aanhoudt, neem dan contact op met de Eversense Klantenservice."
           }
         },
         "pl" : {
