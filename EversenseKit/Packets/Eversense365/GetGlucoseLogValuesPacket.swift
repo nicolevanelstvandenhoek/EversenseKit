@@ -40,7 +40,7 @@ extension Eversense365 {
             var data = Data([PacketIds.ReadCommandId.rawValue, ReadIds.LogValue.rawValue, LogTypes.Glucose.rawValue])
             data.append(BinaryOperations.dataFrom32Bits(value: from))
             data.append(BinaryOperations.dataFrom32Bits(value: to))
-            return CryptoUtil.shared.encrypt(data: data)
+            return data
         }
 
         func parseResponse(data: Data) -> GetGlucoseLogValuesResponse {
@@ -60,7 +60,7 @@ extension Eversense365 {
 
             var history: [GlucoseHistoryItem] = []
             var i: UInt32 = 0
-            while i + length < actualData.count {
+            while i + length <= actualData.count {
                 let end = i + length
                 let chunk = Data(actualData.subdata(in: Int(i) ..< Int(end)))
 

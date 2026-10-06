@@ -1546,7 +1546,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Weet je zeker dat je deze volger wilt verwijderen uit je Eversense NU delen?"
+            "value" : "Weet je zeker dat je deze volger wilt verwijderen uit je Eversense NOW delen?"
           }
         },
         "pl" : {
@@ -9808,7 +9808,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "NU Eversense"
+            "value" : "Eversense NOW"
           }
         },
         "pl" : {
@@ -12074,7 +12074,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Glucose opschorten"
+            "value" : "Onderbreken bij lage glucose"
           }
         },
         "pl" : {
@@ -20332,7 +20332,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Buiten bereik Hoge glucose"
+            "value" : "Buiten bereik hoge glucose"
           }
         },
         "pl" : {
@@ -20494,7 +20494,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Buiten bereik Lage glucose"
+            "value" : "Buiten bereik lage glucose"
           }
         },
         "pl" : {
@@ -21790,7 +21790,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Voorspelling Laag alarm ingeschakeld"
+            "value" : "Voorspelling laag alarm ingeschakeld"
           }
         },
         "pl" : {

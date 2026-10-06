@@ -23,8 +23,7 @@ class BluetoothManager: NSObject {
     func ensureConnected(completionAsync: @escaping (ConnectFailure?) -> Void) {
         let completion = { (_ result: ConnectFailure?) -> Void in
             if let cgmManager = self.cgmManager {
-                cgmManager.state.connectionStatus = result == nil ? .connected : .idle
-                cgmManager.notifyStateDidChange()
+                cgmManager.updateState { $0.connectionStatus = result == nil ? .connected : .idle }
             }
 
             self.stopScan()
@@ -39,8 +38,7 @@ class BluetoothManager: NSObject {
         }
 
         if let _ = peripheral, let _ = peripheralManager {
-            cgmManager.state.connectionStatus = .connected
-            cgmManager.notifyStateDidChange()
+            cgmManager.updateState { $0.connectionStatus = .connected }
 
             logger.debug("Already connected!")
 
@@ -48,8 +46,7 @@ class BluetoothManager: NSObject {
             return
         }
 
-        cgmManager.state.connectionStatus = .connecting
-        cgmManager.notifyStateDidChange()
+        cgmManager.updateState { $0.connectionStatus = .connecting }
 
         if let peripheral = peripheral {
             logger.debug("Reconnecting to device...")
@@ -105,7 +102,7 @@ class BluetoothManager: NSObject {
         stopScan()
 
         scanCompletion = completion
-        manager.scanForPeripherals(withServices: [PeripheralManager.serviceUUID])
+        manager.scanForPeripherals(withServices: [CBUUID.serviceUUID])
 
         logger.info("Started scanning!")
     }
@@ -198,8 +195,7 @@ extension BluetoothManager: CBCentralManagerDelegate {
             return
         }
 
-        cgmManager.state.bleNameString = peripheral.name
-        cgmManager.notifyStateDidChange()
+        cgmManager.updateState { $0.bleNameString = peripheral.name }
 
         self.peripheral = peripheral
         peripheralManager = PeripheralManager(
@@ -209,7 +205,7 @@ extension BluetoothManager: CBCentralManagerDelegate {
         )
 
         logger.debug("Connected to transmitter -> Start discovering services...")
-        peripheral.discoverServices([PeripheralManager.serviceUUID])
+        peripheral.discoverServices([CBUUID.serviceUUID])
     }
 
     func centralManager(_: CBCentralManager, didDisconnectPeripheral _: CBPeripheral, error: Error?) {
@@ -224,8 +220,7 @@ extension BluetoothManager: CBCentralManagerDelegate {
             return
         }
 
-        cgmManager.state.connectionStatus = .idle
-        cgmManager.notifyStateDidChange()
+        cgmManager.updateState { $0.connectionStatus = .idle }
 
         if !cgmManager.isOnboarded {
             return
