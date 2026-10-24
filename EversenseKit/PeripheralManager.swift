@@ -10,6 +10,12 @@ class PeripheralManager: NSObject {
     private var securityHandshakeCompleted = false
     private var service: CBService?
     private var requestCharacteristic: CBCharacteristic?
+
+    /// Services and characteristics have been discovered; writes are possible.
+    var isConfigured: Bool { requestCharacteristic != nil }
+
+    /// The 365 handshake failed on this link, so nothing can be decrypted until it is retried.
+    private(set) var needsHandshake = false
     private var responseCharacteristic: CBCharacteristic?
 
     private var buffer = Data([])
@@ -206,14 +212,20 @@ extension PeripheralManager: CBPeripheralDelegate {
         } else {
             logger.info("Successfully enabled notify for \(characteristic.uuid.uuidString)")
 
-            Task {
-                switch cgmManager.state.security {
-                case .none:
-                    writeNoneSecurity()
-                case .v2:
-                    await authFlowV2()
-                }
+            switch cgmManager.state.security {
+            case .none:
+                Task { writeNoneSecurity() }
+            case .v2:
+                runHandshakeV2()
             }
+        }
+    }
+
+    private func runHandshakeV2() {
+        needsHandshake = false
+        Task {
+            await authFlowV2()
+            needsHandshake = !securityHandshakeCompleted
         }
     }
 
@@ -234,6 +246,14 @@ extension PeripheralManager: CBPeripheralDelegate {
             return
         }
         var actualData = Data(buffer)
+
+        if !isE3, needsHandshake {
+            // The transmitter is pushing to a link whose handshake failed; retry it now
+            logger.info("Received data on an unauthenticated link, retrying handshake", type: .receive)
+            buffer = Data()
+            runHandshakeV2()
+            return
+        }
 
         if !isE3, securityHandshakeCompleted {
             // Only decrypt if packet is for 365 & not for Authentication
@@ -441,21 +461,45 @@ extension PeripheralManager {
                     password: credentials.password
                 )
 
-                let fleetSecret = await KeyVaultApi.getFleetSecretV2(
-                    cgmManager: cgmManager,
-                    accessToken: accessResponse.accessToken,
-                    serialNumber: whoAmIResponse.serialNumber.base64Safe(),
-                    nonce: whoAmIResponse.nonce.base64Safe(),
-                    flags: whoAmIResponse.flags,
-                    kpClientUniqueId: publicKey.subdata(in: 27 ..< publicKey.count).base64Safe()
-                )
+                func requestCertificate(flags: Bool) async -> SecureKeyResponse? {
+                    await KeyVaultApi.getFleetSecretV2(
+                        cgmManager: cgmManager,
+                        accessToken: accessResponse.accessToken,
+                        serialNumber: whoAmIResponse.serialNumber.base64Safe(),
+                        nonce: whoAmIResponse.nonce.base64Safe(),
+                        flags: flags,
+                        kpClientUniqueId: publicKey.subdata(in: 27 ..< publicKey.count).base64Safe()
+                    )
+                }
+
+                var fleetSecret = await requestCertificate(flags: whoAmIResponse.flags)
+
+                // The meaning of the WhoAmI flag bytes isn't confirmed. Some transmitters report
+                // 01 00 (parsed as tx_flags=false) yet the key vault only returns their
+                // certificate for tx_flags=true, answering IsKeyAvailable=false otherwise.
+                // When no certificate comes back, ask once more with the flag inverted.
+                if fleetSecret?.result.certificate == nil {
+                    logger.warning(
+                        "No certificate for tx_flags=\(whoAmIResponse.flags) " +
+                            "(IsKeyAvailable=\(fleetSecret?.result.isKeyAvailable.description ?? "nil")), " +
+                            "retrying with tx_flags=\(!whoAmIResponse.flags)"
+                    )
+                    let retry = await requestCertificate(flags: !whoAmIResponse.flags)
+                    if retry?.result.certificate != nil {
+                        logger.info("Got certificate with tx_flags=\(!whoAmIResponse.flags)")
+                        fleetSecret = retry
+                    }
+                }
 
                 guard let fleetSecret = fleetSecret,
                       fleetSecret.status == "Success",
                       let certificate = fleetSecret.result.certificate
                 else {
                     logger.error("FleetSecret is empty or is missing information...")
-                    failConnect(.preconditionFailed(reason: "FleetSecret is empty..."))
+                    let reason = fleetSecret?.result.isKeyAvailable == false
+                        ? "Eversense has no key for this transmitter on your account (IsKeyAvailable=false)."
+                        : "FleetSecret is empty..."
+                    failConnect(.preconditionFailed(reason: reason))
                     return
                 }
 
