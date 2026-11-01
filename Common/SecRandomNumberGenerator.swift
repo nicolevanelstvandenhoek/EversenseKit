@@ -4,7 +4,7 @@ struct SecRandomNumberGenerator: RandomNumberGenerator {
         var data = Data(count: size)
         return data.withUnsafeMutableBytes {
             guard SecRandomCopyBytes(kSecRandomDefault, size, $0.baseAddress!) == 0 else { fatalError() }
-            return $0.load(as: UInt64.self)
+            return $0.loadUnaligned(as: UInt64.self)
         }
     }
 }
