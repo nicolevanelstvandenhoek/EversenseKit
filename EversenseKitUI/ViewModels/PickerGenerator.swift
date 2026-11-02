@@ -1,4 +1,4 @@
-import HealthKit
+import LoopAlgorithm
 
 struct PickerSettings {
     let min: Double
@@ -7,7 +7,7 @@ struct PickerSettings {
 }
 
 enum PickerGenerator {
-    static func generatePickerValues(setting: PickerSettings, units: HKUnit, roundedFormat: String = "%.1f") -> [Double] {
+    static func generatePickerValues(setting: PickerSettings, units: LoopUnit, roundedFormat: String = "%.1f") -> [Double] {
         var values: [Double] = []
         var currentValue = setting.min
 
@@ -22,7 +22,7 @@ enum PickerGenerator {
             // Use a Set to track unique values rounded to 1 decimal
             var uniqueRoundedValues = Set<String>()
             values = values.filter { value in
-                let mmollValue = HKQuantity(unit: .milligramsPerDeciliter, doubleValue: value)
+                let mmollValue = LoopQuantity(unit: .milligramsPerDeciliter, doubleValue: value)
                 let roundedValue = String(format: roundedFormat, mmollValue.doubleValue(for: .millimolesPerLiter))
                 return uniqueRoundedValues.insert(roundedValue).inserted
             }

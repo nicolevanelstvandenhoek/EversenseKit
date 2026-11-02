@@ -147,7 +147,7 @@ class CryptoUtil {
     }
 
     public func generateEncryptionSalt(salt: Data, i: Int64) -> Data {
-        let temp1 = salt.withUnsafeBytes { $0.load(as: Int64.self).littleEndian }
+        let temp1 = salt.withUnsafeBytes { $0.loadUnaligned(as: Int64.self).littleEndian }
         let temp2 = temp1 & -16384 | i
 
         return temp2.toData(length: 8)
